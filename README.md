@@ -80,13 +80,56 @@ CIRCUIT DIAGRAM
 **
 **Simulation output:** 
 **
+int potPin = A5;
+
+int ledPin = 2;
+
+void setup()
+
+pinMode(potPin, INPUT);
+
+pinMode(ledPin, OUTPUT);
+
+Serial.begin(9600);
+
+}
+
+void loop()
+
+{
+
+int PotMeasure = analogRead(A5);
+
+Serial.print("\nSensor Value: ");
+
+Serial.print(PotMeasure);
+
+if (PotMeasure>=650)
+
+{
+
+digitalWrite(2, HIGH);
+
+}
+
+else
+
+{
+
+digitalWrite(2, LOW);
+
+}
+
+}
 
 
 [My image](username.github.com/repository/img/image.jpg)
+before
+![Uploading Screenshot (13).png…]()
 
+after
 
-
-
+![Screenshot (15)](https://user-images.githubusercontent.com/127467412/234006979-4c728dee-f1b3-415e-8074-caea9188bf67.png)
 
 
 
